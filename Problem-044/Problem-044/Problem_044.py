@@ -5,11 +5,10 @@
 #It can be seen that P4 + P7 = 22 + 70 = 92 = P8. However, their difference, 70 − 22 = 48, is not pentagonal.
 
 #Find the pair of pentagonal numbers, Pj and Pk, for which their sum and difference are pentagonal and D = |Pk − Pj| is minimised; what is the value of D?
-from types import *
 
 def is_pentagonal(pn):
     pn_check = 0
-    n = 1
+    n = int((pn/2)**(1/2))
     while pn > pn_check:
         pn_check = (n * (3*n - 1) / 2)
         if  pn_check == pn:
